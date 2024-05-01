@@ -1,0 +1,26 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-12 my-3">
+        <app-form-new-item [selection]="selection" (newItemEvent)="addNewCity($event)" name="newItem"
+         [label]="'city'" [className]="'btn-danger'">
+        </app-form-new-item>
+      </div>
+      <div class="col-md-8">
+          <app-cities *ngFor="let city of cities" 
+          (cityDeleteEvent)="onCityDelete($event)"
+          (citySelectedEvent)="onCitySelected($event)"  [city]="city"  [selection]="selection">
+          </app-cities>
+      </div>
+  
+        <!--<input type="text" (keypress)="onSearch()">-->
+        
+          <div class="col-md-4">
+              <div *ngIf="selection?.name">
+                <p>your city is: {{selection?.name}} </p>
+                 <app-button (click)="onClear()" [color]="'blue'" [label]="'Clear Seleccion'" > </app-button>
+          </div>
+        </div>
+    </div>
+  </div>
+  <hr>
