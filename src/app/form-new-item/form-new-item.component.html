@@ -8,7 +8,12 @@
      </div>
      <div class="col-auto">
         <button (click)="onAddNewItem(newItem.value); newItem.value= ''" type="button" class="btn" [ngClass]="className">Add{{label}}</button>
-     </div>
+        <button (click)="onupdateItem(selection , newItem.value); newItem.value= ''" type="button" 
+      class="btn" [ngClass]="className">Update{{label}}</button>
+   
+      </div>
+     
+      
     </div>
 </form>
 

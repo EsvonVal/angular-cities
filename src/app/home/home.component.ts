@@ -60,6 +60,13 @@ this.selection= {
 };
   }
 
+  updateCity(city: City){
+    this.dataSvs.updateCity(city).subscribe(res=>{
+      const arrayTemp= this.cities.filter(item=> item._id !== city._id);
+      this.onClear();
+ })
+
+  }
 
 
 }

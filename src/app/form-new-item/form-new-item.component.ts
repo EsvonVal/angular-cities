@@ -14,6 +14,7 @@ export class FormNewItemComponent  {
   @Input() selection!: City
 /*comunicamos del hijo al padre mediante output*/
   @Output() newItemEvent= new EventEmitter();
+  @Output() updateItemEvent = new EventEmitter();
 
   onAddNewItem(item:string){
     this.newItemEvent.emit(item)
@@ -24,6 +25,18 @@ export class FormNewItemComponent  {
     console.log("Render Form")
     return true;
   }*/
+
+  onupdateItem(item: City, change: string): void{
+   /* console.log(change)
+    console.log(item)*/
+    const city: City = {
+      _id: item._id,
+      name: change
+
+    }
+    this.newItemEvent.emit(item);
+
+  }
   
   }
 

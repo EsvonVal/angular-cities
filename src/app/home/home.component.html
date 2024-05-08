@@ -2,7 +2,9 @@
 <div class="container">
     <div class="row">
       <div class="col-md-12 my-3">
-        <app-form-new-item [selection]="selection" (newItemEvent)="addNewCity($event)" name="newItem"
+        <app-form-new-item [selection]="selection"
+        (updateItemEvent)="updateCity($event)"
+        (newItemEvent)="addNewCity($event)" name="newItem"
          [label]="'city'" [className]="'btn-danger'">
         </app-form-new-item>
       </div>
@@ -12,7 +14,23 @@
           (citySelectedEvent)="onCitySelected($event)"  [city]="city"  [selection]="selection">
           </app-cities>
       </div>
-  
+      
+      <hr>
+      <app-card> 
+        <div card-header>header</div>
+        <div card-body>body</div>
+      </app-card>
+      <hr>
+      <app-card>
+        <div card-header>spain</div>
+        <div card-body>body 2</div>
+      </app-card>
+      <hr>
+      <app-card>
+        <div card-header>hello</div>
+        <div card-body>hi</div>
+      </app-card>
+       <hr>
         <!--<input type="text" (keypress)="onSearch()">-->
         
           <div class="col-md-4">
@@ -24,3 +42,4 @@
     </div>
   </div>
   <hr>
+

@@ -13,7 +13,9 @@ import { DetailsComponent } from './users/details/details.component';
 import { ListComponent } from './users/list/list.component';
 import { ContactComponent } from './contact/contact.component';
 import { FormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { CardComponent } from './card/card.component'
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import {HttpClientModule} from '@angular/common/http'
     UserComponent,
     DetailsComponent,
     ListComponent,
+    SpinnerComponent,
+    CardComponent,
     
   ],
   imports: [
